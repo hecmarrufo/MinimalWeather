@@ -1,0 +1,37 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Weather info for:
+      {{provincia.nombre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+          <ion-card>
+            <ion-card-content>
+              <ion-card>
+                <ion-list>
+                  <ion-item *ngFor="let data of details">
+                    <ion-label>
+                      <h1>{{data.name}}</h1>
+                      <h2 *ngFor="let item of data.main | keyvalue">
+                        <b>{{item.key}}</b>: <i>{{item.value}}</i>
+                      </h2>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-card>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "hector-provincias1",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
